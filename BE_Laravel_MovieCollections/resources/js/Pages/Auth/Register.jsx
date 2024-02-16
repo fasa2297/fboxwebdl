@@ -66,6 +66,22 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
+                    <InputLabel htmlFor="phone" value="Phone" />
+
+                    <TextInput
+                        id="phone"
+                        type="number"
+                        name="phone"
+                        value={data.phone}
+                        className="mt-1 block w-full border bottom-1 p-2"
+                        autoComplete="current-phone"
+                        onChange={(e) => setData('phone', e.target.value)}
+                    />
+
+                    <InputError message={errors.phone} className="mt-2" />
+                </div>
+                
+                <div className="mt-4">
                     <InputLabel htmlFor="password" value="Password" />
 
                     <TextInput
